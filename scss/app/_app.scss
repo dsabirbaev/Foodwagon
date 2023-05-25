@@ -1,0 +1,100 @@
+.app {
+    background-color: linear-gradient(261.24deg, #FFAE00 63.85%, #FF8A00 111.94%);
+    // background-color: $color-yellow;
+    //background-image: url(../images/app/background.png);
+    //background-repeat: no-repeat;
+    //background-position: center;
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+
+        gap: 80px;
+        padding-top: 130px;
+    }
+
+    &-up {
+        background-color: $color-white;
+        box-shadow: 0px 14px 15px rgba(255, 174, 0, 0.01), 0px 27px 82px rgba(255, 174, 0, 0.28);
+        border-radius: 46px;
+        padding: 55px;
+        width: fit-content;
+        margin: 0 auto;
+
+        &__cards {
+            display: flex;
+            gap: 100px;
+
+        }
+
+        &__card {
+            @include font-style(35px, $ff-SourceSansProBold, 700, $color-yellow);
+            display: flex;
+            align-items: center;
+            gap: 30px;
+
+            &--name {
+                max-width: 160px;
+            }
+
+
+        }
+
+        &__card:nth-child(2) {
+            position: relative;
+            &::after {
+                content: "";
+                width: 2px;
+                height: 100%;
+                background-color: $color-grey;
+                position: absolute;
+                top: 0%;
+                right: -15%;
+            }
+            &::before {
+                content: "";
+                width: 2px;
+                height: 100%;
+                background-color: $color-grey;
+                position: absolute;
+                top: 0%;
+                left: -15%;
+            }
+        }
+    }
+
+    &-down {
+        display: flex;
+        background-image: url(../images/app/background.png);
+        background-repeat: no-repeat;
+        background-size: 100% 90%;
+        background-color: $color-yellow;
+
+        &__left {
+
+            img {
+                width: 100%;
+            }
+        }
+
+        &__right {
+            display: flex;
+            flex-direction: column;
+            padding-top: 118px;
+
+            &--title {
+                @include font-style(68px, $ff-SourceSansProBold, 700, $color-yellow);
+                line-height: 72.08px;
+            }
+
+            &--text {
+                @include font-style(18px, $ff-SourceSansProRegular, 400, $color-grey);
+                max-width: 400px;
+                line-height: 25.2px;
+                margin-top: 16px;
+                margin-bottom: 40px;
+            }
+
+        }
+    }
+}

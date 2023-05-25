@@ -1,0 +1,100 @@
+
+.popular-items{
+
+    &__inner{
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+        padding: 80px;
+    }
+
+    &__title{
+        @include font-style(43px, $ff-SourceSansProBold, 700, $color-black);
+        line-height: 48.16px;
+        text-align: center;
+    }
+
+    &__cards{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__card{
+        position: relative;
+        max-width: 220px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    
+        &--name{
+            @include font-style(22px, $ff-SourceSansProBold, 700, $color-black);
+            line-height: 26.4px;
+        }
+        &--address{
+            @include font-style(22px, $ff-SourceSansProRegular, 400, $color-yellow);
+            line-height: 26.4px;
+            display: flex;
+            align-items: center;
+            img{
+                margin-right: 8px;
+            }
+        }
+        &--price{
+            @include font-style(22px, $ff-SourceSansProBold, 700, $color-black);
+            line-height: 26.4px;
+        }
+        &--btn{
+            @include font-style(18px, $ff-SourceSansProBold, 700, $color-white);
+            background-color: $color-pink;
+            line-height: 18px;
+            border-radius: 8px;
+            padding: 21px 0;
+            box-shadow: 0px 5px 10px rgba(253, 114, 92, 0.22), 0px 20px 40px rgba(250, 99, 35, 0.24);
+        }
+    }
+}
+
+
+
+// settings for slides
+
+.popular-items__cards .slick-slide {
+    margin: 0 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.popular-items__cards .slick-track{
+//	margin: 0px 0;
+
+}
+
+
+/* arrows */
+.popular-items__cards .slick-arrow{
+	position: absolute;
+	top: 55%;
+	margin: -30px 0px 0px 0px;
+	z-index: 10;
+	font-size: 0;
+	width: 56px;
+	height: 56px;
+}
+.popular-items__cards .slick-arrow.slick-prev{
+	left: -5%;
+	background-image: url('../images/popular-items/left.svg');
+	background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    background-color: $color-yellow;
+    border-radius: 100%;
+}
+.popular-items__cards .slick-arrow.slick-next{
+	right: -5%;
+    background-image: url('../images/popular-items/right.svg');
+	background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    background-color: $color-yellow;
+    border-radius: 100%;
+}

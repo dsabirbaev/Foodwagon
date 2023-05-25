@@ -1,0 +1,101 @@
+.restaurants {
+    &__inner {
+        padding-bottom: 80px;
+        display: flex;
+        flex-direction: column;
+        gap: 88px;
+    }
+
+    &__title {
+        @include font-style(43px, $ff-SourceSansProBold, 700, $color-black);
+        text-align: center;
+        line-height: 48.16px;
+    }
+
+    &__cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__card {
+        width: 320px;
+        margin-top: 40px;
+        &--img {
+            position: relative;
+        }
+        &--pic{
+            border-radius: 16px;
+            width: 100%;
+        }
+        &--sale {
+            position: absolute;
+            top: 24px;
+            left: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            @include font-style(22px, $ff-SourceSansProBold, 700, $color-white);
+            line-height: 26.4px;
+            background-color: $color-pink;
+            padding: 8px 10px;
+            border-radius: 8px;
+            width: fit-content;
+        }
+
+        &--fast {
+            position: absolute;
+            top: 24px;
+            left: 155px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            @include font-style(22px, $ff-SourceSansProBold, 700, $color-white);
+            line-height: 26.4px;
+            background-color: $color-yellow;
+            padding: 8px 10px;
+            border-radius: 8px;
+        }
+
+        &--content {
+            margin-top: 24px;
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            @include font-style(22px, $ff-SourceSansProBold, 700, $color-black);
+            line-height: 26.4px;
+        }
+
+        &--rate {
+            color: $color-yellow;
+        }
+
+        &--footer {
+            margin-top: 32px;
+            @include font-style(22px, $ff-SourceSansProBold, 700, $color-pink);
+            line-height: 26.4px;
+            padding: 8px 16px;
+            background: rgba(241, 114, 40, 0.2);
+            border-radius: 16px;
+            width: fit-content;
+            cursor: pointer;
+        }
+    }
+    &__link{
+        @include font-style(18px, $ff-SourceSansProBold, 700, $color-white);
+        background-color: $color-yellow;
+        border-radius: 14px;
+        width: fit-content;
+        padding: 21px 48px;
+        align-self: center;
+    }
+}
+
+
+.restaurants__card--footer-green{
+    color: $color-green;
+    background: rgba(121, 185, 60, 0.2);
+    cursor: pointer;
+}

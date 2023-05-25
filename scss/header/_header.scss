@@ -1,0 +1,61 @@
+.header {
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 0;
+    }
+
+    &-location {
+        @include font-style(14px, $ff-SourceSansProRegular, 400, $color-black);
+        line-height: 25.2px;
+        display: flex;
+        align-items: center;
+
+        span:nth-child(1) {
+            @include font-style(18px, $ff-SourceSansProBold, 700, $color-black);
+            line-height: 18px;
+        }
+
+        span:nth-child(3) {
+            @include font-style(18px, $ff-OpenSansBold, 700, $color-black);
+            line-height: 18px;
+            line-height: 25.2px;
+            margin-left: 2px;
+        }
+
+        img {
+            margin-left: 12px;
+            margin-right: 9px;
+        }
+    }
+
+    &-user {
+        display: flex;
+        &__search {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            input {
+                @include font-style(18px, $ff-SourceSansProBold, 700, $color-black);
+                line-height: 18px;
+                width: 110px;
+            }
+        }
+
+        &__log {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            @include font-style(18px, $ff-SourceSansProBold, 700, $color-yellow);
+            line-height: 18px;
+            box-shadow: 0px 5px 10px rgba(255, 174, 0, 0.26), 0px 20px 40px rgba(255, 174, 0, 0.29);
+            border-radius: 8px;
+            padding: 14px 24px;
+            cursor: pointer;
+        }
+    }
+}

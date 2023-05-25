@@ -1,0 +1,47 @@
+.flash-deals {
+    
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        padding: 80px 0;
+    }
+
+    &__card {
+        max-width: 300px;
+        max-height: 415px;
+    }
+
+    &__title {
+        @include font-style(22px, $ff-SourceSansProBold, 700, $color-black);
+        line-height: 26.4px;
+        margin-top: 32px;
+        margin-bottom: 14px;
+    }
+
+    &__footer {
+        @include font-style(22px, $ff-SourceSansProBold, 700, $color-pink);
+        line-height: 26.4px;
+        padding: 8px 16px;
+        background: rgba(241, 114, 40, 0.2);
+        border-radius: 8px;
+        width: fit-content;
+    }
+    &__img{
+        position: relative;
+    }
+    &__num{
+        @include font-style(68px, $ff-SourceSansProBold, 700, $color-white);
+        line-height: 72.08px;
+        background-color: $color-yellow;
+        width: fit-content;
+        border-radius: 0px 32px 0px 0px;
+        padding: 10px 18px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+    &__pic {
+        width: 300px;
+        border-radius: 16px;
+    }
+}

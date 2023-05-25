@@ -1,0 +1,30 @@
+@import 'variables',
+        'mixins',
+        'fonts';
+
+
+
+
+
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2px;
+    //border: 1px solid red;
+}
+
+
+
+
+@import './header/header';
+@import './banner/banner';
+@import './flesh-deals/flesh-deals';
+@import './selection/selection';
+@import './popular-items/popular-items';
+@import './restaurants/restaurants';
+@import './foods/foods';
+@import './app/app';
+@import './details/details';
+@import './question/question';
+@import './footer/footer';

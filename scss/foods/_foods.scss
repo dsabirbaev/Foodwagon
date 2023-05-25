@@ -1,0 +1,94 @@
+
+.foods{
+    background-color: #FEFAF1;
+    &__inner{
+        display: flex;
+        flex-direction: column;
+        gap: 88px;
+        padding-top: 82px;
+        padding-bottom: 55px;
+    }
+    &-header{
+        display: flex;
+        justify-content: space-between;
+        display: relative;
+        &__title{
+            @include font-style(43px, $ff-SourceSansProBold, 700, $color-black);
+            line-height: 48.16px;
+        }
+        &__link{
+            @include font-style(18px, $ff-SourceSansProBold, 700, $color-yellow);
+            line-height: 18px;
+            margin-right: 140px;
+            cursor: pointer;
+        }
+    }
+    &-cards{
+        display: flex;
+        justify-content: space-between;
+    }
+    &-card{
+        max-width: 200px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 26px;
+        &__img{
+            border-radius: 100%;
+            width: 100%;
+        }
+        &__name{
+            @include font-style(22px, $ff-SourceSansProBold, 700, $color-black);
+            line-height: 26.4px;
+        }
+    }
+}
+
+
+
+// settings for slides
+
+.foods-cards .slick-slide {
+    margin: 0 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.foods-cards .slick-track{
+//	margin: 0px 0;
+
+}
+
+
+/* arrows */
+.foods-cards .slick-arrow{
+	position: absolute;
+	top: 55%;
+	//margin: -30px 0px 0px 0px;
+	z-index: 10;
+	font-size: 0;
+	width: 56px;
+	height: 56px;
+}
+.foods-cards .slick-arrow.slick-prev{
+    top: -65%;
+	right: 5%;
+	background-image: url('../images/popular-items/left.svg');
+	background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    background-color: $color-yellow;
+    border-radius: 100%;
+    box-shadow: 0px 5px 8px rgba(222, 151, 0, 0.24), 0px 14px 32px rgba(255, 178, 14, 0.29);
+}
+.foods-cards .slick-arrow.slick-next{
+    top: -65%;
+	right: 0%;
+    background-image: url('../images/popular-items/right.svg');
+	background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    background-color: $color-yellow;
+    border-radius: 100%;
+    box-shadow: 0px 5px 8px rgba(222, 151, 0, 0.24), 0px 14px 32px rgba(255, 178, 14, 0.29);
+}
